@@ -36,6 +36,9 @@ const SaloonSchema = new mongoose.Schema({
     min: 0,
     max: 5,
   },
+  slots: {
+    type: [String],
+  },
   cheapestPrice: {
     type: Number,
     required: true,

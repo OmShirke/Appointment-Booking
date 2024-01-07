@@ -9,10 +9,6 @@ const SlotSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    maxPeople: {
-      type: Number,
-      required: true,
-    },
     desc: {
       type: String,
       required: true,
