@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  countByCity,
   createSaloon,
   deleteSaloon,
   getSaloon,
@@ -19,9 +20,11 @@ router.put("/:id", verifyAdmin, updateSaloon);
 router.delete("/:id", verifyAdmin, deleteSaloon);
 
 //Get
-router.get("/:id", verifyUser, getSaloon);
+router.get("/find/:id", getSaloon);
 
 //get all
-router.get("/", verifyUser, getSaloons);
+router.get("/", getSaloons);
+router.get("/countByCity", countByCity);
+router.get("/countByType", getSaloons);
 
 export default router;
